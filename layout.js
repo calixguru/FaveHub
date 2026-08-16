@@ -31,32 +31,32 @@
             "index.html",
 
         login:
-            "login.html",
+            "login/",
 
         register:
-            "register.html",
+            "register/",
 
-        dashboard: "/app",
+        dashboard: "app/",
 
-        chat: "/chat",
+        chat: "chat/",
 
-        support: "/support",
+        support: "support/",
 
-        transactions: "/transactions",
+        transactions: "transactions/",
 
-        buy: "/buy",
+        buy: "buy/",
 
-        dataPlans: "/data-plans",
+        dataPlans: "data-plans/",
 
-        wallet: "/wallet",
+        wallet: "wallet/",
 
         walletTopUp: "/wallet/top-up",
 
-        forgotPassword: "forgot-password.html",
+        forgotPassword: "forgot-password/",
 
-        terms: "/terms",
+        terms: "terms/",
 
-        privacy: "/privacy"
+        privacy: "privacy/"
 
     };
 
