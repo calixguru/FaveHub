@@ -28,7 +28,7 @@
     const ROUTES = {
 
         home:
-            "index.html",
+            "/FaveHub/index.html",
 
         login:
             "login/",
