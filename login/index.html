@@ -1,0 +1,440 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <link href='https://fonts.googleapis.com/css?family=Baloo+2&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" type="image/png" href="/static/img/logo2.png">
+    <title>FaveHub</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+    body {
+            font-family: 'Baloo 2', cursive;
+        }
+    </style>
+</head>
+
+<body class="
+    min-h-screen
+    bg-slate-50
+    text-slate-900
+    dark:bg-slate-950
+    dark:text-white
+    transition-colors
+    duration-300
+">
+
+    <main class="min-h-[calc(100vh-4rem)] flex items-center justify-center px-5 py-12">
+
+    <div class="w-full max-w-md">
+
+        <!-- HEADER -->
+        <div class="text-center mb-8">
+
+            <div class="
+                mx-auto
+                w-12 h-12
+                rounded-2xl
+                flex items-center justify-center
+                bg-blue-600
+                text-white
+                font-black
+                shadow-lg
+                shadow-blue-600/20
+            ">
+                D
+            </div>
+
+            <h1 class="
+                mt-5
+                text-3xl
+                font-black
+                tracking-tight
+            ">
+                Welcome back
+            </h1>
+
+            <p class="
+                mt-2
+                text-sm
+                text-slate-500
+                dark:text-white/40
+            ">
+                Sign in to continue to FaveHub.
+            </p>
+
+        </div>
+
+
+        <!-- LOGIN CARD -->
+        <div class="
+            rounded-3xl
+            border
+            border-slate-200
+            dark:border-white/10
+            bg-white
+            dark:bg-white/[0.035]
+            backdrop-blur-xl
+            shadow-xl
+            p-6
+            sm:p-8
+        ">
+
+            <!-- ERROR MESSAGE -->
+            <div
+                id="loginError"
+                class="
+                    hidden
+                    mb-5
+                    rounded-xl
+                    border
+                    border-red-200
+                    dark:border-red-400/20
+                    bg-red-50
+                    dark:bg-red-500/10
+                    px-4 py-3
+                    text-sm
+                    text-red-600
+                    dark:text-red-300
+                "
+            ></div>
+
+
+            <form id="loginForm" class="space-y-5">
+
+                <!-- EMAIL / PHONE -->
+                <div>
+
+                    <label
+                        for="identifier"
+                        class="
+                            block
+                            mb-2
+                            text-xs
+                            font-bold
+                            uppercase
+                            tracking-wider
+                            text-slate-500
+                            dark:text-white/50
+                        "
+                    >
+                        Email
+                    </label>
+
+                    <input
+                    value = "calixotu@gmail.com"
+                        id="identifier"
+                        name="identifier"
+                        type="text"
+                        autocomplete="username"
+                        placeholder="Enter your email or phone"
+                        required
+                        class="
+                            w-full
+                            h-12
+                            px-4
+                            rounded-xl
+                            border
+                            border-slate-200
+                            dark:border-white/10
+                            bg-slate-50
+                            dark:bg-white/5
+                            text-slate-900
+                            dark:text-white
+                            placeholder:text-slate-400
+                            dark:placeholder:text-white/25
+                            outline-none
+                            focus:border-blue-500
+                            focus:ring-2
+                            focus:ring-blue-500/10
+                            transition
+                        "
+                    >
+
+                </div>
+
+
+                <!-- PASSWORD -->
+                <div>
+
+                    <div class="flex items-center justify-between mb-2">
+
+                        <label
+                            for="password"
+                            class="
+                                text-xs
+                                font-bold
+                                uppercase
+                                tracking-wider
+                                text-slate-500
+                                dark:text-white/50
+                            "
+                        >
+                            Password
+                        </label>
+
+                        <a
+                            href="forgot-password.html"
+                            class="
+                                text-xs
+                                font-semibold
+                                text-blue-600
+                                dark:text-blue-400
+                                hover:text-blue-500
+                            "
+                        >
+                            Forgot password?
+                        </a>
+
+                    </div>
+
+
+                    <div class="relative">
+
+                        <input
+                        value = "Marriage1084"
+                            id="password"
+                            name="password"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Enter your password"
+                            required
+                            class="
+                                w-full
+                                h-12
+                                px-4 pr-12
+                                rounded-xl
+                                border
+                                border-slate-200
+                                dark:border-white/10
+                                bg-slate-50
+                                dark:bg-white/5
+                                text-slate-900
+                                dark:text-white
+                                placeholder:text-slate-400
+                                dark:placeholder:text-white/25
+                                outline-none
+                                focus:border-blue-500
+                                focus:ring-2
+                                focus:ring-blue-500/10
+                                transition
+                            "
+                        >
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="
+                                absolute
+                                right-3
+                                top-1/2
+                                -translate-y-1/2
+                                w-8 h-8
+                                flex items-center justify-center
+                                rounded-lg
+                                text-slate-400
+                                dark:text-white/30
+                                hover:bg-slate-200
+                                dark:hover:bg-white/10
+                                transition
+                            "
+                            aria-label="Show password"
+                        >
+                            ◉
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- REMEMBER -->
+                <div class="flex items-center gap-2">
+
+                    <input
+                        id="remember"
+                        type="checkbox"
+                        class="
+                            w-4 h-4
+                            rounded
+                            border-slate-300
+                            dark:border-white/20
+                            bg-transparent
+                            text-blue-600
+                            focus:ring-blue-500/20
+                        "
+                    >
+
+                    <label
+                        for="remember"
+                        class="
+                            text-sm
+                            text-slate-500
+                            dark:text-white/45
+                        "
+                    >
+                        Keep me signed in
+                    </label>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    id="loginButton"
+                    type="submit"
+                    class="
+                        w-full
+                        h-12
+                        rounded-xl
+                        bg-blue-600
+                        hover:bg-blue-500
+                        active:bg-blue-700
+                        text-white
+                        font-semibold
+                        transition
+                        shadow-lg
+                        shadow-blue-600/20
+                        disabled:opacity-60
+                        disabled:cursor-not-allowed
+                    "
+                >
+                    <span id="loginButtonText">
+                        Sign in
+                    </span>
+
+                    <span
+                        id="loginLoader"
+                        class="hidden"
+                    >
+                        Signing in...
+                    </span>
+                </button>
+
+            </form>
+
+
+            <!-- DIVIDER -->
+            <div class="flex items-center gap-4 my-7">
+
+                <div class="
+                    h-px
+                    flex-1
+                    bg-slate-200
+                    dark:bg-white/10
+                "></div>
+
+                <span class="
+                    text-[10px]
+                    uppercase
+                    tracking-widest
+                    text-slate-400
+                    dark:text-white/25
+                ">
+                    or
+                </span>
+
+                <div class="
+                    h-px
+                    flex-1
+                    bg-slate-200
+                    dark:bg-white/10
+                "></div>
+
+            </div>
+
+
+            <!-- REGISTER -->
+            <div class="text-center">
+
+                <p class="
+                    text-sm
+                    text-slate-500
+                    dark:text-white/40
+                ">
+                    Don't have an account?
+
+                    <a
+                        href="register.html"
+                        class="
+                            ml-1
+                            font-semibold
+                            text-blue-600
+                            dark:text-blue-400
+                            hover:text-blue-500
+                        "
+                    >
+                        Create one
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUPPORT -->
+        <div class="mt-6 text-center">
+
+            <a
+                href="/support"
+                class="
+                    text-xs
+                    text-slate-400
+                    dark:text-white/30
+                    hover:text-slate-700
+                    dark:hover:text-white/60
+                    transition
+                "
+            >
+                Need help? Contact support
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+</html>

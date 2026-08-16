@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <link href='https://fonts.googleapis.com/css?family=Baloo+2&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" type="image/png" href="/static/img/logo2.png">
+    <title>FaveHub</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+    body {
+            font-family: 'Baloo 2', cursive;
+        }
+    </style>
+</head>
+
+<body class="
+    min-h-screen
+    bg-slate-50
+    text-slate-900
+    dark:bg-slate-950
+    dark:text-white
+    transition-colors
+    duration-300
+">
+    <main>
+
+        <div class="
+            max-w-md
+            mx-auto
+            px-5
+            py-12
+        ">
+
+            <div class="
+                rounded-3xl
+                border
+                border-slate-200
+                dark:border-white/10
+                bg-white
+                dark:bg-slate-900
+                shadow-xl
+                p-7
+            ">
+
+                <!-- HEADER -->
+
+                <div class="mb-7">
+
+                    <div class="
+                        w-14 h-14
+                        rounded-2xl
+                        bg-blue-100
+                        dark:bg-blue-500/10
+                        flex
+                        items-center
+                        justify-center
+                        text-2xl
+                        mb-5
+                    ">
+                        🔐
+                    </div>
+
+
+                    <h1 class="
+                        text-2xl
+                        font-black
+                        text-slate-900
+                        dark:text-white
+                    ">
+                        Reset PIN
+                    </h1>
+
+
+                    <p class="
+                        mt-2
+                        text-sm
+                        leading-6
+                        text-slate-500
+                        dark:text-white/40
+                    ">
+                        Enter your current password and
+                        create a new 4-digit transaction PIN.
+                    </p>
+
+                </div>
+
+
+                <!-- ERROR -->
+
+                <div
+                    id="resetPinError"
+                    class="
+                        hidden
+                        mb-5
+                        rounded-xl
+                        border
+                        border-red-200
+                        dark:border-red-500/20
+                        bg-red-50
+                        dark:bg-red-500/10
+                        px-4
+                        py-3
+                        text-sm
+                        text-red-600
+                        dark:text-red-400
+                    "
+                ></div>
+
+
+                <!-- FORM -->
+
+                <form
+                    id="resetPinForm"
+                    class="space-y-5"
+                >
+
+                    <!-- CURRENT PASSWORD -->
+
+                    <div>
+
+                        <label
+                            for="currentPassword"
+                            class="
+                                block
+                                mb-2
+                                text-xs
+                                font-bold
+                                uppercase
+                                tracking-wider
+                                text-slate-500
+                                dark:text-white/50
+                            "
+                        >
+                            Current password
+                        </label>
+
+
+                        <input
+                            id="currentPassword"
+                            type="password"
+                            autocomplete="current-password"
+                            placeholder="Enter your password"
+                            required
+                            class="
+                                w-full
+                                h-12
+                                px-4
+                                rounded-xl
+                                border
+                                border-slate-200
+                                dark:border-white/10
+                                bg-slate-50
+                                dark:bg-white/5
+                                text-slate-900
+                                dark:text-white
+                                outline-none
+                                focus:border-blue-500
+                                focus:ring-2
+                                focus:ring-blue-500/10
+                            "
+                        >
+
+                    </div>
+
+
+                    <!-- NEW PIN -->
+
+                    <div>
+
+                        <label
+                            for="newPin"
+                            class="
+                                block
+                                mb-2
+                                text-xs
+                                font-bold
+                                uppercase
+                                tracking-wider
+                                text-slate-500
+                                dark:text-white/50
+                            "
+                        >
+                            New PIN
+                        </label>
+
+
+                        <input
+                            id="newPin"
+                            type="password"
+                            inputmode="numeric"
+                            autocomplete="new-password"
+                            maxlength="4"
+                            pattern="[0-9]{4}"
+                            placeholder="••••"
+                            required
+                            class="
+                                w-full
+                                h-12
+                                px-4
+                                rounded-xl
+                                border
+                                border-slate-200
+                                dark:border-white/10
+                                bg-slate-50
+                                dark:bg-white/5
+                                text-slate-900
+                                dark:text-white
+                                tracking-[0.5em]
+                                text-center
+                                text-lg
+                                font-bold
+                                outline-none
+                                focus:border-blue-500
+                                focus:ring-2
+                                focus:ring-blue-500/10
+                            "
+                        >
+
+                    </div>
+
+
+                    <!-- CONFIRM PIN -->
+
+                    <div>
+
+                        <label
+                            for="confirmPin"
+                            class="
+                                block
+                                mb-2
+                                text-xs
+                                font-bold
+                                uppercase
+                                tracking-wider
+                                text-slate-500
+                                dark:text-white/50
+                            "
+                        >
+                            Confirm new PIN
+                        </label>
+
+
+                        <input
+                            id="confirmPin"
+                            type="password"
+                            inputmode="numeric"
+                            autocomplete="new-password"
+                            maxlength="4"
+                            pattern="[0-9]{4}"
+                            placeholder="••••"
+                            required
+                            class="
+                                w-full
+                                h-12
+                                px-4
+                                rounded-xl
+                                border
+                                border-slate-200
+                                dark:border-white/10
+                                bg-slate-50
+                                dark:bg-white/5
+                                text-slate-900
+                                dark:text-white
+                                tracking-[0.5em]
+                                text-center
+                                text-lg
+                                font-bold
+                                outline-none
+                                focus:border-blue-500
+                                focus:ring-2
+                                focus:ring-blue-500/10
+                            "
+                        >
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        id="resetPinButton"
+                        type="submit"
+                        class="
+                            w-full
+                            h-12
+                            rounded-xl
+                            bg-blue-600
+                            hover:bg-blue-500
+                            text-white
+                            font-semibold
+                            transition
+                            shadow-lg
+                            shadow-blue-600/20
+                            disabled:opacity-60
+                            disabled:cursor-not-allowed
+                        "
+                    >
+
+                        <span id="resetPinButtonText">
+                            Reset PIN
+                        </span>
+
+                        <span
+                            id="resetPinLoader"
+                            class="hidden"
+                        >
+                            Resetting PIN...
+                        </span>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/reset-pin.js"></script>
+    <script src="js/toggle.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+</html>

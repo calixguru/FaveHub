@@ -1,0 +1,1543 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <link href='https://fonts.googleapis.com/css?family=Baloo+2&display=swap' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" type="image/png" href="/static/img/logo2.png">
+    <title>FaveHub</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+    body {
+            font-family: 'Baloo 2', cursive;
+        }
+    </style>
+</head>
+
+<body class="
+    min-h-screen
+    bg-slate-50
+    text-slate-900
+    dark:bg-slate-950
+    dark:text-white
+    transition-colors
+    duration-300
+">
+
+    <!-- HERO -->
+    <main>
+
+        <section class="relative overflow-hidden">
+
+            <!-- BACKGROUND GLOW -->
+            <div class="
+                absolute
+                top-[-180px]
+                left-1/2
+                -translate-x-1/2
+                w-[600px]
+                h-[400px]
+                rounded-full
+                bg-blue-500/20
+                blur-[120px]
+                pointer-events-none
+            "></div>
+
+
+            <div class="
+                max-w-7xl
+                mx-auto
+                px-5 sm:px-8
+                pt-20
+                pb-20
+                lg:pt-28
+                lg:pb-28
+            ">
+
+                <div class="
+                    grid
+                    lg:grid-cols-2
+                    gap-14
+                    items-center
+                ">
+
+
+                    <!-- LEFT -->
+                    <div>
+
+                        <div class="
+                            inline-flex
+                            items-center
+                            gap-2
+                            px-3 py-1.5
+                            rounded-full
+                            border
+                            border-blue-200
+                            dark:border-blue-400/20
+                            bg-blue-50
+                            dark:bg-blue-500/10
+                            text-blue-600
+                            dark:text-blue-300
+                            text-[10px]
+                            font-bold
+                            uppercase
+                            tracking-widest
+                        ">
+
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+
+                            Your digital assistant
+
+                        </div>
+
+
+                        <h1 class="
+                            mt-6
+                            text-5xl
+                            sm:text-6xl
+                            lg:text-7xl
+                            font-black
+                            tracking-[-0.04em]
+                            leading-[0.95]
+                            uppercase
+                        ">
+
+                            Your digital life,
+                            <span class="text-blue-600 dark:text-blue-400">
+                                simplified...
+                            </span>
+
+                        </h1>
+
+
+                        <p class="
+                            mt-6
+                            max-w-xl
+                            text-lg
+                            leading-8
+                            text-slate-500
+                            dark:text-white/50
+                        ">
+
+                            Buy data, manage your wallet and handle your
+                            everyday digital services from one simple place.
+
+                            Or just tell FaveHub what you need.
+
+                        </p>
+
+
+                        <!-- CTA -->
+                        <div class="
+                            mt-8
+                            flex flex-wrap
+                            gap-3
+                        ">
+
+                            <a href="/register"
+                               class="
+                                    h-12
+                                    px-6
+                                    rounded-xl
+                                    flex items-center
+                                    justify-center
+                                    bg-blue-600
+                                    hover:bg-blue-500
+                                    text-white
+                                    font-semibold
+                                    transition
+                                    shadow-xl
+                                    shadow-blue-600/20
+                               ">
+                                Get Started
+                            </a>
+
+
+                            <a href="/login"
+                               class="
+                                    h-12
+                                    px-6
+                                    rounded-xl
+                                    flex items-center
+                                    justify-center
+                                    border
+                                    border-slate-200
+                                    dark:border-white/10
+                                    hover:bg-slate-100
+                                    dark:hover:bg-white/5
+                                    font-semibold
+                                    transition
+                               ">
+                                Sign In
+                            </a>
+
+                        </div>
+
+
+                        <div class="
+                            mt-8
+                            flex items-center gap-6
+                            text-xs
+                            text-slate-400
+                            dark:text-white/35
+                        ">
+
+                            <span>✓ Simple</span>
+                            <span>✓ Secure</span>
+                            <span>✓ Fast</span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <main class="min-h-[calc(100vh-4rem)] flex items-center justify-center px-4 py-8">
+
+                        <div class="w-full max-w-2xl">
+
+                            <div class="
+                                relative
+                                rounded-3xl
+                                border
+                                border-slate-200
+                                dark:border-white/10
+                                bg-white
+                                dark:bg-white/[0.035]
+                                backdrop-blur-xl
+                                shadow-2xl
+                                overflow-hidden
+                            ">
+
+                                <!-- HEADER -->
+
+                                <div class="
+                                    px-5 py-4
+                                    border-b
+                                    border-slate-200
+                                    dark:border-white/10
+                                    flex items-center justify-between
+                                ">
+
+                                    <div class="flex items-center gap-3">
+
+                                        <div class="
+                                            w-10 h-10
+                                            rounded-xl
+                                            bg-blue-600
+                                            flex items-center justify-center
+                                            text-white
+                                            font-bold
+                                        ">
+                                            D
+                                        </div>
+
+                                        <div>
+
+                                            <div class="font-semibold text-sm uppercase">
+                                                FaveHub AI
+                                            </div>
+
+                                            <div class="
+                                                text-[10px]
+                                                text-green-500
+                                            ">
+                                                ● Online
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <span class="
+                                        text-[10px]
+                                        uppercase
+                                        tracking-widest
+                                        text-slate-400
+                                        dark:text-white/30
+                                    ">
+                                        Assistant
+                                    </span>
+
+                                </div>
+
+
+                                <!-- MESSAGES -->
+
+                                <div
+                                    id="chatMessages"
+                                    class="
+                                        p-5
+                                        space-y-4
+                                        h-[430px]
+                                        overflow-y-auto
+                                        scroll-smooth
+                                    "
+                                >
+
+                                    <!-- Messages inserted here -->
+
+                                    <div
+                                        id="chatEmpty"
+                                        class="
+                                            h-full
+                                            flex
+                                            items-center
+                                            justify-center
+                                            text-center
+                                        "
+                                    >
+
+                                        <div>
+
+                                            <div class="
+                                                mx-auto
+                                                w-12 h-12
+                                                rounded-2xl
+                                                bg-blue-600/10
+                                                text-blue-600
+                                                flex
+                                                items-center
+                                                justify-center
+                                                font-bold
+                                                text-lg
+                                            ">
+                                                D
+                                            </div>
+
+                                            <p class="
+                                                mt-4
+                                                text-sm
+                                                text-slate-500
+                                                dark:text-white/40
+                                            ">
+                                                Hi! What would you like
+                                                to do today?
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TYPING -->
+
+                                <div
+                                    id="typingIndicator"
+                                    class="hidden px-5 pb-3"
+                                >
+
+                                    <div class="
+                                        inline-flex
+                                        items-center
+                                        gap-1
+                                        rounded-2xl
+                                        rounded-tl-md
+                                        px-4 py-3
+                                        bg-slate-100
+                                        dark:bg-white/5
+                                    ">
+
+                                        <span class="
+                                            w-1.5 h-1.5
+                                            rounded-full
+                                            bg-slate-400
+                                            animate-bounce
+                                        "></span>
+
+                                        <span
+                                            class="
+                                                w-1.5 h-1.5
+                                                rounded-full
+                                                bg-slate-400
+                                                animate-bounce
+                                            "
+                                            style="animation-delay:150ms"
+                                        ></span>
+
+                                        <span
+                                            class="
+                                                w-1.5 h-1.5
+                                                rounded-full
+                                                bg-slate-400
+                                                animate-bounce
+                                            "
+                                            style="animation-delay:300ms"
+                                        ></span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- INPUT -->
+
+                                <div class="
+                                    p-4
+                                    border-t
+                                    border-slate-200
+                                    dark:border-white/10
+                                ">
+
+                                    <form
+                                        id="chatForm"
+                                        class="
+                                            flex
+                                            items-end
+                                            gap-2
+                                        "
+                                    >
+
+                                        <!-- VOICE -->
+
+                                        <button
+                                            id="voiceButton"
+                                            type="button"
+                                            title="Hold to record"
+                                            class="
+                                                shrink-0
+                                                w-12 h-12
+                                                rounded-xl
+                                                border
+                                                border-slate-200
+                                                dark:border-white/10
+                                                bg-slate-50
+                                                dark:bg-white/5
+                                                text-slate-500
+                                                dark:text-white/50
+                                                hover:bg-slate-100
+                                                dark:hover:bg-white/10
+                                                transition
+                                                flex
+                                                items-center
+                                                justify-center
+                                            "
+                                        >
+                                            <span id="voiceIcon">
+                                                <i class="fas fa-exit"></i>
+                                            </span>
+                                        </button>
+
+
+                                        <!-- TEXT -->
+
+                                        <div class="
+                                            relative
+                                            flex-1
+                                        ">
+
+                                            <textarea
+                                                id="chatInput"
+                                                rows="1"
+                                                maxlength="400"
+                                                placeholder="What do you need?"
+                                                class="
+                                                    w-full
+                                                    min-h-12
+                                                    max-h-28
+                                                    resize-none
+                                                    rounded-xl
+                                                    border
+                                                    border-slate-200
+                                                    dark:border-white/10
+                                                    bg-slate-50
+                                                    dark:bg-white/5
+                                                    px-4 py-3
+                                                    pr-14
+                                                    text-sm
+                                                    text-slate-900
+                                                    dark:text-white
+                                                    placeholder:text-slate-400
+                                                    dark:placeholder:text-white/25
+                                                    outline-none
+                                                    focus:border-blue-500
+                                                    focus:ring-2
+                                                    focus:ring-blue-500/10
+                                                "
+                                            ></textarea>
+
+                                            <span
+                                                id="wordCounter"
+                                                class="
+                                                    absolute
+                                                    right-3
+                                                    bottom-2
+                                                    text-[9px]
+                                                    text-slate-400
+                                                    dark:text-white/25
+                                                "
+                                            >
+                                                0/50
+                                            </span>
+
+                                        </div>
+
+
+                                        <!-- SEND -->
+
+                                        <button
+                                            id="sendButton"
+                                            type="submit"
+                                            class="
+                                                shrink-0
+                                                w-12 h-12
+                                                rounded-xl
+                                                bg-blue-600
+                                                hover:bg-blue-500
+                                                text-white
+                                                transition
+                                                flex
+                                                items-center
+                                                justify-center
+                                            "
+                                        >
+                                            ↑
+                                        </button>
+
+                                    </form>
+
+
+                                    <div class="
+                                        mt-2
+                                        text-center
+                                        text-[10px]
+                                        text-slate-400
+                                        dark:text-white/25
+                                    ">
+                                        You can type or send a voice message
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </main>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FEATURES -->
+        <section
+            id="features"
+            class="
+                border-t
+                border-slate-200
+                dark:border-white/10
+            "
+        >
+
+            <div
+                class="
+                    max-w-7xl
+                    mx-auto
+                    px-5 sm:px-8
+                    py-20
+                "
+            >
+
+                <!-- ========================================= -->
+                <!-- HEADER -->
+                <!-- ========================================= -->
+
+                <div class="max-w-2xl">
+
+                    <div
+                        class="
+                            text-[10px]
+                            font-bold
+                            uppercase
+                            tracking-[0.2em]
+                            text-blue-600
+                            dark:text-blue-400
+                        "
+                    >
+                        Everything in one place
+                    </div>
+
+
+                    <h2
+                        class="
+                            mt-3
+                            text-3xl
+                            sm:text-4xl
+                            font-bold
+                            tracking-tight
+                        "
+                    >
+                        Simple when you need it.
+                        Powerful when you want it.
+                    </h2>
+
+
+                    <p
+                        class="
+                            mt-4
+                            text-sm
+                            sm:text-base
+                            leading-7
+                            text-slate-500
+                            dark:text-white/40
+                            max-w-xl
+                        "
+                    >
+                        Buy data, recharge airtime, manage your wallet,
+                        check your transactions or simply ask FaveHub
+                        to do it for you.
+                    </p>
+
+                </div>
+
+
+                <!-- ========================================= -->
+                <!-- FEATURES -->
+                <!-- ========================================= -->
+
+                <div
+                    class="
+                        mt-10
+                        grid
+                        sm:grid-cols-2
+                        lg:grid-cols-3
+                        gap-4
+                    "
+                >
+
+
+                    <!-- ===================================== -->
+                    <!-- DATA & AIRTIME -->
+                    <!-- ===================================== -->
+
+                    <div
+                        class="
+                            p-6
+                            rounded-2xl
+                            border
+                            border-slate-200
+                            dark:border-white/10
+                            bg-white
+                            dark:bg-white/[0.025]
+                            hover:border-blue-400/30
+                            transition
+                            flex
+                            flex-col
+                        "
+                    >
+
+                        <div
+                            class="
+                                w-11 h-11
+                                rounded-xl
+                                flex
+                                items-center
+                                justify-center
+                                bg-blue-500/10
+                                text-blue-500
+                                border
+                                border-blue-500/10
+                                text-lg
+                            "
+                        >
+                            ◉
+                        </div>
+
+
+                        <h3 class="mt-5 font-bold">
+                            Data & Airtime
+                        </h3>
+
+
+                        <p
+                            class="
+                                mt-2
+                                text-sm
+                                leading-6
+                                text-slate-500
+                                dark:text-white/40
+                            "
+                        >
+                            Buy data or airtime the traditional way
+                            if you prefer choosing everything yourself.
+                        </p>
+
+
+                        <!-- ACTIONS -->
+
+                        <div
+                            class="
+                                mt-5
+                                flex
+                                flex-wrap
+                                gap-2
+                            "
+                        >
+
+                            <a
+                                href=""
+                                class="
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    h-10
+                                    px-4
+                                    rounded-xl
+                                    bg-blue-600
+                                    hover:bg-blue-500
+                                    text-white
+                                    text-xs
+                                    font-semibold
+                                    transition
+                                    shadow-lg
+                                    shadow-blue-600/20
+                                "
+                            >
+                                Buy Data / Airtime
+                            </a>
+
+
+                            <a
+                                href=""
+                                class="
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    h-10
+                                    px-4
+                                    rounded-xl
+                                    border
+                                    border-slate-200
+                                    dark:border-white/10
+                                    text-xs
+                                    font-semibold
+                                    text-slate-600
+                                    dark:text-white/60
+                                    hover:bg-slate-100
+                                    dark:hover:bg-white/5
+                                    transition
+                                "
+                            >
+                                View Plans
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ===================================== -->
+                    <!-- WALLET -->
+                    <!-- ===================================== -->
+
+                    <div
+                        class="
+                            p-6
+                            rounded-2xl
+                            border
+                            border-slate-200
+                            dark:border-white/10
+                            bg-white
+                            dark:bg-white/[0.025]
+                            hover:border-green-400/30
+                            transition
+                            flex
+                            flex-col
+                        "
+                    >
+
+                        <div
+                            class="
+                                w-11 h-11
+                                rounded-xl
+                                flex
+                                items-center
+                                justify-center
+                                bg-green-500/10
+                                text-green-500
+                                border
+                                border-green-500/10
+                                text-lg
+                            "
+                        >
+                            ₦
+                        </div>
+
+
+                        <h3 class="mt-5 font-bold">
+                            Wallet
+                        </h3>
+
+
+                        <!-- ================================= -->
+                        <!-- LOGGED IN BALANCE -->
+                        <!-- ================================= -->
+
+                        <div
+                            id="walletBalanceContainer"
+                            class="mt-3"
+                        >
+
+                            <div
+                                id="walletBalanceLoading"
+                                class="
+                                    h-6
+                                    w-28
+                                    rounded-lg
+                                    bg-slate-100
+                                    dark:bg-white/5
+                                    animate-pulse
+                                "
+                            ></div>
+
+
+                            <div
+                                id="walletBalance"
+                                class="
+                                    hidden
+                                    text-2xl
+                                    font-black
+                                    tracking-tight
+                                    text-slate-900
+                                    dark:text-white
+                                "
+                            >
+                                ₦0.00
+                            </div>
+
+
+                            <div
+                                id="walletLoginMessage"
+                                class="
+                                    hidden
+                                    text-sm
+                                    leading-6
+                                    text-slate-500
+                                    dark:text-white/40
+                                "
+                            >
+                                Log in to see your wallet balance.
+                            </div>
+
+                        </div>
+
+
+                        <p
+                            class="
+                                mt-2
+                                text-sm
+                                leading-6
+                                text-slate-500
+                                dark:text-white/40
+                            "
+                        >
+                            Keep money in your FaveHub wallet and
+                            use it whenever you need to make a purchase.
+                        </p>
+
+
+                        <!-- ACTIONS -->
+
+                        <div
+                            class="
+                                mt-5
+                                flex
+                                flex-wrap
+                                gap-2
+                            "
+                        >
+
+                            <a
+                                href=""
+                                class="
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    h-10
+                                    px-4
+                                    rounded-xl
+                                    bg-green-600
+                                    hover:bg-green-500
+                                    text-white
+                                    text-xs
+                                    font-semibold
+                                    transition
+                                    shadow-lg
+                                    shadow-green-600/20
+                                "
+                            >
+                                Top Up Wallet
+                            </a>
+
+
+                            <a
+                                href=""
+                                class="
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    h-10
+                                    px-4
+                                    rounded-xl
+                                    border
+                                    border-slate-200
+                                    dark:border-white/10
+                                    text-xs
+                                    font-semibold
+                                    text-slate-600
+                                    dark:text-white/60
+                                    hover:bg-slate-100
+                                    dark:hover:bg-white/5
+                                    transition
+                                "
+                            >
+                                Transactions
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ===================================== -->
+                    <!-- AI ASSISTANT -->
+                    <!-- ===================================== -->
+
+                    <div
+                        class="
+                            p-6
+                            rounded-2xl
+                            border
+                            border-slate-200
+                            dark:border-white/10
+                            bg-white
+                            dark:bg-white/[0.025]
+                            hover:border-purple-400/30
+                            transition
+                            flex
+                            flex-col
+                        "
+                    >
+
+                        <div
+                            class="
+                                w-11 h-11
+                                rounded-xl
+                                flex
+                                items-center
+                                justify-center
+                                bg-purple-500/10
+                                text-purple-500
+                                border
+                                border-purple-500/10
+                                text-lg
+                            "
+                        >
+                            ✦
+                        </div>
+
+
+                        <h3 class="mt-5 font-bold">
+                            AI Assistant
+                        </h3>
+
+
+                        <p
+                            class="
+                                mt-2
+                                text-sm
+                                leading-6
+                                text-slate-500
+                                dark:text-white/40
+                            "
+                        >
+                            Type or speak naturally and let FaveHub
+                            help you get things done without navigating
+                            through multiple pages.
+                        </p>
+
+
+                        <!-- ACTIONS -->
+
+                        <div
+                            class="
+                                mt-5
+                                flex
+                                flex-wrap
+                                gap-2
+                            "
+                        >
+
+                            <a
+                                href=""
+                                class="
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    h-10
+                                    px-4
+                                    rounded-xl
+                                    bg-purple-600
+                                    hover:bg-purple-500
+                                    text-white
+                                    text-xs
+                                    font-semibold
+                                    transition
+                                    shadow-lg
+                                    shadow-purple-600/20
+                                "
+                            >
+                                Open FaveHub Chat
+                            </a>
+
+
+                            <a
+                                href=""
+                                class="
+                                    inline-flex
+                                    items-center
+                                    justify-center
+                                    h-10
+                                    px-4
+                                    rounded-xl
+                                    border
+                                    border-slate-200
+                                    dark:border-white/10
+                                    text-xs
+                                    font-semibold
+                                    text-slate-600
+                                    dark:text-white/60
+                                    hover:bg-slate-100
+                                    dark:hover:bg-white/5
+                                    transition
+                                "
+                            >
+                                Transaction History
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ========================================= -->
+                <!-- QUICK ACTION BAR -->
+                <!-- ========================================= -->
+
+                <div
+                    class="
+                        mt-5
+                        p-4
+                        rounded-2xl
+                        border
+                        border-slate-200
+                        dark:border-white/10
+                        bg-slate-50
+                        dark:bg-white/[0.02]
+                        flex
+                        flex-col
+                        sm:flex-row
+                        sm:items-center
+                        sm:justify-between
+                        gap-4
+                    "
+                >
+
+                    <div>
+
+                        <div
+                            class="
+                                text-sm
+                                font-bold
+                                text-slate-800
+                                dark:text-white
+                            "
+                        >
+                            Prefer doing things yourself?
+                        </div>
+
+
+                        <div
+                            class="
+                                mt-1
+                                text-xs
+                                text-slate-500
+                                dark:text-white/35
+                            "
+                        >
+                            Skip the chat and go straight to
+                            FaveHub's regular purchase pages.
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="
+                            flex
+                            flex-wrap
+                            gap-2
+                        "
+                    >
+
+                        <a
+                            href=""
+                            class="
+                                inline-flex
+                                items-center
+                                justify-center
+                                h-10
+                                px-4
+                                rounded-xl
+                                border
+                                border-slate-200
+                                dark:border-white/10
+                                bg-white
+                                dark:bg-white/5
+                                text-xs
+                                font-semibold
+                                hover:bg-slate-100
+                                dark:hover:bg-white/10
+                                transition
+                            "
+                        >
+                            All Data Plans
+                        </a>
+
+
+                        <a
+                            href=""
+                            class="
+                                inline-flex
+                                items-center
+                                justify-center
+                                h-10
+                                px-4
+                                rounded-xl
+                                bg-slate-900
+                                dark:bg-white
+                                text-white
+                                dark:text-slate-900
+                                text-xs
+                                font-semibold
+                                hover:opacity-90
+                                transition
+                            "
+                        >
+                            Buy Data / Airtime
+                        </a>
+
+
+                        <a
+                            href=""
+                            class="
+                                inline-flex
+                                items-center
+                                justify-center
+                                h-10
+                                px-4
+                                rounded-xl
+                                border
+                                border-slate-200
+                                dark:border-white/10
+                                text-xs
+                                font-semibold
+                                hover:bg-white
+                                dark:hover:bg-white/5
+                                transition
+                            "
+                        >
+                            Transaction History
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- HOW IT WORKS -->
+        <section id="how" class="uppercase">
+
+            <div class="
+                max-w-7xl
+                mx-auto
+                px-5 sm:px-8
+                py-20
+            ">
+
+                <div class="text-center max-w-2xl mx-auto">
+
+                    <div class="
+                        text-[10px]
+                        font-bold
+                        uppercase
+                        tracking-[0.2em]
+                        text-blue-600
+                        dark:text-blue-400
+                    ">
+                        How it works
+                    </div>
+
+                    <h2 class="
+                        mt-3
+                        text-3xl
+                        sm:text-4xl
+                        font-bold
+                    ">
+                        Three simple steps.
+                    </h2>
+
+                </div>
+
+
+                <div class="
+                    mt-12
+                    grid
+                    md:grid-cols-3
+                    gap-6
+                ">
+
+                    <div class="text-center">
+
+                        <div class="
+                            mx-auto
+                            w-12 h-12
+                            rounded-2xl
+                            bg-blue-600
+                            text-white
+                            flex items-center justify-center
+                            font-bold
+                        ">
+                            01
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            Create your account
+                        </h3>
+
+                        <p class="
+                            mt-2
+                            text-sm
+                            text-slate-500
+                            dark:text-white/40
+                        ">
+                            Register in a few seconds and get started.
+                        </p>
+
+                    </div>
+
+
+                    <div class="text-center">
+
+                        <div class="
+                            mx-auto
+                            w-12 h-12
+                            rounded-2xl
+                            bg-blue-600
+                            text-white
+                            flex items-center justify-center
+                            font-bold
+                        ">
+                            02
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            Fund your wallet
+                        </h3>
+
+                        <p class="
+                            mt-2
+                            text-sm
+                            text-slate-500
+                            dark:text-white/40
+                        ">
+                            Add funds securely using your preferred
+                            payment method.
+                        </p>
+
+                    </div>
+
+
+                    <div class="text-center">
+
+                        <div class="
+                            mx-auto
+                            w-12 h-12
+                            rounded-2xl
+                            bg-blue-600
+                            text-white
+                            flex items-center justify-center
+                            font-bold
+                        ">
+                            03
+                        </div>
+
+                        <h3 class="mt-5 font-bold">
+                            Tell us what you need
+                        </h3>
+
+                        <p class="
+                            mt-2
+                            text-sm
+                            text-slate-500
+                            dark:text-white/40
+                        ">
+                            Navigate normally or simply chat with
+                            FaveHub AI.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        // ============================================================
+        // WALLET BALANCE
+        // ============================================================
+
+        async function loadWalletBalance() {
+
+            const loading =
+                document.getElementById(
+                    "walletBalanceLoading"
+                );
+
+            const balance =
+                document.getElementById(
+                    "walletBalance"
+                );
+
+            const loginMessage =
+                document.getElementById(
+                    "walletLoginMessage"
+                );
+
+
+            if (
+                !loading ||
+                !balance ||
+                !loginMessage
+            ) {
+
+                return;
+
+            }
+
+
+            // ========================================
+            // CHECK LOGIN
+            // ========================================
+
+            const token =
+                typeof getAccessToken === "function"
+                    ? getAccessToken()
+                    : localStorage.getItem(
+                        "datahub_access_token"
+                    );
+
+
+            // ========================================
+            // NOT LOGGED IN
+            // ========================================
+
+            if (!token) {
+
+                loading.classList.add("hidden");
+
+                loginMessage.classList.remove("hidden");
+
+                return;
+
+            }
+
+
+            // ========================================
+            // GET BALANCE
+            // ========================================
+
+            try {
+
+                const response =
+                    await apiFetch(
+                        "/wallet/balance/"
+                    );
+
+
+                if (!response) {
+
+                    loading.classList.add("hidden");
+
+                    loginMessage.textContent =
+                        "Log in to see your wallet balance.";
+
+                    loginMessage.classList.remove(
+                        "hidden"
+                    );
+
+                    return;
+
+                }
+
+
+                // ====================================
+                // UNAUTHORIZED
+                // ====================================
+
+                if (response.status === 401) {
+
+                    loading.classList.add("hidden");
+
+                    loginMessage.textContent =
+                        "Log in to see your wallet balance.";
+
+                    loginMessage.classList.remove(
+                        "hidden"
+                    );
+
+                    return;
+
+                }
+
+
+                if (!response.ok) {
+
+                    throw new Error(
+                        "Unable to retrieve wallet balance."
+                    );
+
+                }
+
+
+                const data =
+                    await response.json();
+
+
+                // ====================================
+                // BALANCE
+                // ====================================
+
+                const walletAmount =
+                    Number(
+                        data.balance || 0
+                    );
+
+
+                balance.textContent =
+                    `₦${walletAmount.toLocaleString(
+                        "en-NG",
+                        {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        }
+                    )}`;
+
+
+                loading.classList.add("hidden");
+
+                balance.classList.remove("hidden");
+
+
+            } catch (error) {
+
+                console.error(
+                    "Wallet balance error:",
+                    error
+                );
+
+
+                loading.classList.add("hidden");
+
+                loginMessage.textContent =
+                    "Unable to load your wallet balance.";
+
+                loginMessage.classList.remove(
+                    "hidden"
+                );
+
+            }
+
+        }
+
+
+        // ============================================================
+        // LOAD WALLET
+        // ============================================================
+
+        if (
+            document.readyState === "loading"
+        ) {
+
+            document.addEventListener(
+                "DOMContentLoaded",
+                loadWalletBalance
+            );
+
+        } else {
+
+            loadWalletBalance();
+
+        }
+    </script>
+
+    <script src="api.js"></script>
+    <script src="toggle.js"></script>
+    <script src="chat.js"></script>
+    <script src="layout.js"></script>
+
+</body>
+</html>
