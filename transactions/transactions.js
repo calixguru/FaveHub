@@ -38,7 +38,7 @@ async function loadTransactions() {
         if (response.status === 401) {
 
             window.location.href =
-                "/login";
+                "/Favehub/login";
 
             return;
 
