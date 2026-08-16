@@ -280,9 +280,9 @@ function showLoginSuccess() {
     setTimeout(() => {
 
 
-        const homePage = '.html';
+        const homePage = '/FaveHub/';
 
-        window.location.href = `index${homePage}`;
+        window.location.href = `${homePage}`;
 
     }, 1500);
 
