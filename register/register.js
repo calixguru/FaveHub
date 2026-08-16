@@ -371,7 +371,7 @@ function showRegistrationSuccess() {
 
     setTimeout(() => {
 
-        window.location.href = "/FaveHub";
+        window.location.href = "/FaveHub/login";
 
     }, 1500);
 
