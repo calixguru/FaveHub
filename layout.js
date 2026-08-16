@@ -31,32 +31,32 @@
             "/FaveHub/",
 
         login:
-            "login/",
+            "/FaveHub/login/",
 
         register:
-            "register/",
+            "/FaveHub/register/",
 
-        dashboard: "app/",
+        dashboard: "/FaveHub/app/",
 
-        chat: "chat/",
+        chat: "/FaveHub/chat/",
 
         support: "support/",
 
         transactions: "transactions/",
 
-        buy: "buy/",
+        buy: "/FaveHub/buy/",
 
-        dataPlans: "data-plans/",
+        dataPlans: "/FaveHub/data-plans/",
 
-        wallet: "wallet/",
+        wallet: "/FaveHub/wallet/",
 
-        walletTopUp: "/wallet/top-up",
+        walletTopUp: "/FaveHub/wallet/top-up",
 
-        forgotPassword: "forgot-password/",
+        forgotPassword: "/FaveHub/forgot-password/",
 
-        terms: "terms/",
+        terms: "/FaveHub/terms/",
 
-        privacy: "privacy/"
+        privacy: "/FaveHub/privacy/"
 
     };
 
