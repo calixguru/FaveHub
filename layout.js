@@ -28,35 +28,35 @@
     const ROUTES = {
 
         home:
-            "/FaveHub/",
+            "/FaveHub",
 
         login:
-            "/FaveHub/login/",
+            "/FaveHub/login",
 
         register:
-            "/FaveHub/register/",
+            "/FaveHub/register",
 
-        dashboard: "/FaveHub/app/",
+        dashboard: "/FaveHub/app",
 
-        chat: "/FaveHub/chat/",
+        chat: "/FaveHub/chat",
 
-        support: "support/",
+        support: "support",
 
-        transactions: "transactions/",
+        transactions: "transactions",
 
-        buy: "/FaveHub/buy/",
+        buy: "/FaveHub/buy",
 
-        dataPlans: "/FaveHub/data-plans/",
+        dataPlans: "/FaveHub/data-plans",
 
-        wallet: "/FaveHub/wallet/",
+        wallet: "/FaveHub/wallet",
 
         walletTopUp: "/FaveHub/wallet/top-up",
 
-        forgotPassword: "/FaveHub/forgot-password/",
+        forgotPassword: "/FaveHub/forgot-password",
 
-        terms: "/FaveHub/terms/",
+        terms: "/FaveHub/terms",
 
-        privacy: "/FaveHub/privacy/"
+        privacy: "/FaveHub/privacy"
 
     };
 
