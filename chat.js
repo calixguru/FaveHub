@@ -402,7 +402,7 @@
                 >
 
                     <a
-                        href="login.html"
+                        href="/FaveHub/login"
                         class="
                             h-10
                             px-5
@@ -423,7 +423,7 @@
 
 
                     <a
-                        href="register.html"
+                        href="/FaveHub/register"
                         class="
                             h-10
                             px-5
