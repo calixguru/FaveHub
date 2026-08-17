@@ -269,7 +269,7 @@ function showRegistrationSuccess() {
                     dark:text-white/45
                 "
             >
-                Welcome to DataHub.
+                Welcome to FaveHub.
                 Your account has been created successfully.
             </p>
 
