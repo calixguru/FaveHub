@@ -201,8 +201,7 @@ function showLoginSuccess() {
                     dark:text-white/45
                 "
             >
-                Welcome back. We're taking you to your
-                DataHub dashboard.
+                Welcome back to FaveHub
             </p>
 
 
