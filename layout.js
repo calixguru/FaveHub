@@ -40,9 +40,9 @@
 
         chat: "/FaveHub/chat",
 
-        support: "support",
+        support: "/FaveHub/support",
 
-        transactions: "transactions",
+        transactions: "/FaveHub/transactions",
 
         buy: "/FaveHub/buy",
 
